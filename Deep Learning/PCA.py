@@ -105,7 +105,7 @@ def PCA_high_dim(X, n_components):
     M = np.zeros((N, N)) # EDIT THIS, compute the matrix \frac{1}{N}XX^T.
 
     M = np.cov(X)
-    
+    # core part to compute the high dimensions PCA
     M = (1/N) * X @ X.T
 
     # Next find eigenvalues and corresponding eigenvectors for S by implementing eig().
